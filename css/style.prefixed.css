@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  width: 66%;
+  /* full width */
+  height: 50vh;
+  /* height of carousel */
+  min-height: 250px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.carousel {
+  width: 100%;
+  background: #FAFAFA;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+/*# sourceMappingURL=style.prefixed.css.map */
