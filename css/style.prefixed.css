@@ -8,7 +8,7 @@ h1 {
 }
 
 .carousel-cell {
-  width: 66%;
+  width: 60%;
   /* full width */
   height: 50vh;
   /* height of carousel */
@@ -24,9 +24,26 @@ h1 {
 .carousel {
   width: 100%;
   background: #FAFAFA;
+  position: relative;
 }
 
 .flickity-page-dots {
   display: none;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 0;
+  background: #333;
+}
+
+.position-for-button {
+  position: relative;
+}
+
+.restart-button {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
 /*# sourceMappingURL=style.prefixed.css.map */

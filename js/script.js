@@ -1,15 +1,21 @@
 var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
   // options
-  //cellAlign: 'center',
   freeScroll: true,
   wrapAround: true,
-  contain: true
+  contain: true,
+  hash: true,
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity( '.carousel', {
+var progressBar = document.querySelector('.progress-bar')
 
-  // options
+flkty.on( 'scroll', function( progress ) {
+  progress = Math.max( 0, Math.min( 1, progress ) );
+  progressBar.style.width = progress * 100 + '%';
 });
+
+var resetButton = document.querySelector('.restart-button');
+resetButton.addEventListener('click', function(){
+	flkty.select(0)
+})
+
