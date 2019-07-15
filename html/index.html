@@ -20,32 +20,37 @@
     	</div>
 
         <script id="carousel-cell-js" type="x-tmpl-mustache">
-            <div class="carousel-cell" style="background-image: url({{{ image }}});"> <div class="container"> <h2> {{ title }} </h2> <p> {{ description }} </p> </div></div>
+            <div class="carousel-cell" id="{{ id }}" style="background-image: url({{{ image }}});"> <div class="container"> <h2> {{ title }} </h2> <p> {{ description }} </p> </div></div>
         </script>
 
     	<script>
             var dataTable = [
                 {
+                    id: 'groole',
                     image: '../images/groole.jpg',
                     title: 'Groole',
                     description: '<p>Pieczone ziemniaczki z czymś fajnym w środku</p>'
                 },
                 {
+                    id: 'buritto',
                     image: '../images/spoco-loco.jpg',
                     title: 'Spocko Locko',
                     description: 'Bardzo maślane buritto'
                 },
                 {
+                    id: 'chwast',
                     image: '../images/chwast.jpg',
                     title: 'Chwast Food',
                     description: 'Czasem trzeba bez mięska'
                 },
                 {
+                    id: 'frytki',
                     image: '../images/frytki.jpg',
                     title: 'Frytki Belgijskie',
                     description: 'Fajne sosy do frytek'
                 },
                 {
+                    id: 'burger',
                     image: '../images/piracki.jpg',
                     title: 'Hamburger z Karaibów',
                     description: 'Krolikarnia obok, można zjeść w pałacowym ogrodzie'
