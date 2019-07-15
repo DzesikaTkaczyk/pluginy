@@ -17,6 +17,7 @@
                 <button class="restart-button">Restart</button>
             </div>
             <div class="progress-bar"></div>
+            <div class="map" id="map"></div>
     	</div>
 
         <script id="carousel-cell-js" type="x-tmpl-mustache">
@@ -29,31 +30,36 @@
                     id: 'groole',
                     image: '../images/groole.jpg',
                     title: 'Groole',
-                    description: '<p>Pieczone ziemniaczki z czymś fajnym w środku</p>'
+                    description: '<p>Pieczone ziemniaczki z czymś fajnym w środku</p>',
+                    coords: {lat: 52.221615, lng: 21.014794}
                 },
                 {
                     id: 'buritto',
                     image: '../images/spoco-loco.jpg',
                     title: 'Spocko Locko',
-                    description: 'Bardzo maślane buritto'
+                    description: 'Bardzo maślane buritto',
+                    coords: {lat: 52.232354, lng: 21.055669}
                 },
                 {
                     id: 'chwast',
                     image: '../images/chwast.jpg',
                     title: 'Chwast Food',
-                    description: 'Czasem trzeba bez mięska'
+                    description: 'Czasem trzeba bez mięska',
+                    coords: {lat: 52.221090, lng: 21.015255}
                 },
                 {
                     id: 'frytki',
                     image: '../images/frytki.jpg',
                     title: 'Frytki Belgijskie',
-                    description: 'Fajne sosy do frytek'
+                    description: 'Fajne sosy do frytek',
+                    coords: {lat: 52.220290, lng: 21.015140}
                 },
                 {
                     id: 'burger',
                     image: '../images/piracki.jpg',
                     title: 'Hamburger z Karaibów',
-                    description: 'Krolikarnia obok, można zjeść w pałacowym ogrodzie'
+                    description: 'Krolikarnia obok, można zjeść w pałacowym ogrodzie',
+                    coords: {lat: 52.190452, lng: 21.024226}
                 }
             ]
         </script>
@@ -62,5 +68,6 @@
         <script src="../vendor/hash.js"></script>
         <script src="../vendor/mustache.min.js"></script>
     	<script src="../js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa3qYMBJJq28E_pihp-i6w67yQa5em0A8&callback=initMap"></script>
     </body>
 </html>
