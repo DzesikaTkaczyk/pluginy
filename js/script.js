@@ -4,10 +4,8 @@
 	Mustache.parse(carouselCell);
 	var dataList = '';
 	for(var i = 0; i < dataTable.length; i++){
-		console.log(dataTable);
 		dataList += Mustache.render(carouselCell, dataTable[i]);
 	}
-	console.log(dataList);
 	var carouselJs = document.getElementById('carousel-js');
 	
 	carouselJs.innerHTML = dataList;
@@ -36,23 +34,29 @@
 	window.initMap = function() {
 		var mapMarker = dataTable[0].coords;
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 13, center: mapMarker
+			zoom: 13, 
+			center: mapMarker
 		});
 		var marker;
-		for(var i = 0; i < dataTable.length; i++){
+		for (var i = 0; i < dataTable.length; i++){
 			mapMarker = dataTable[i].coords;
 			marker = new google.maps.Marker({
-				position: mapMarker, map: map
+				position: mapMarker,
+				map: map
 			});
 
 			function galleryScroll(x){
 				flkty.select(x);
 			}
-
 			google.maps.event.addListener(marker, 'click', galleryScroll.bind(this, i));
-		};
-	};
 
+		};
+
+		flkty.on( 'change', function( index ) {
+			event.preventDefault();
+			map.panTo(dataTable[index].coords);		
+		});
+	};
 
 })();
 
