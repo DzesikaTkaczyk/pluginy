@@ -3,7 +3,7 @@
 	var carouselCell = document.getElementById('carousel-cell-js').innerHTML;
 	Mustache.parse(carouselCell);
 	var dataList = '';
-	for(var i = 0; i < dataTable.length; i++){
+	for (var i = 0; i < dataTable.length; i++){
 		dataList += Mustache.render(carouselCell, dataTable[i]);
 	}
 	var carouselJs = document.getElementById('carousel-js');
@@ -20,7 +20,7 @@
 
 	var progressBar = document.querySelector('.progress-bar')
 
-	flkty.on( 'scroll', function( progress ) {
+	flkty.on('scroll', function(progress) {
 		progress = Math.max( 0, Math.min( 1, progress ) );
 		progressBar.style.width = progress * 100 + '%';
 	});
@@ -52,7 +52,7 @@
 
 		};
 
-		flkty.on( 'change', function( index ) {
+		flkty.on('change', function(index) {
 			event.preventDefault();
 			map.panTo(dataTable[index].coords);		
 		});
