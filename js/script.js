@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', function() {
 	var elem = document.querySelector('.carousel');
 	var flkty = new Flickity( elem, {
 	  // options
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	});
 
 	var resetButton = document.querySelector('.restart-button');
-	resetButton.addEventListener('click', function(){
+	resetButton.addEventListener('click', function() {
 		flkty.select(0)
 	})
 });
